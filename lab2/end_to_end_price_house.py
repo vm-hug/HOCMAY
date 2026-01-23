@@ -33,7 +33,7 @@ prices_house['balcony'] = prices_house['balcony'].apply(clean_balcony)
 
 imputer = SimpleImputer(strategy='median')
 data_cleaned = pd.DataFrame(imputer.fit_transform(prices_house), columns=prices_house.columns)
-data_cleaned.shape
+print(data_cleaned.shape)
 
 X = data_cleaned.drop('price', axis=1)
 y = data_cleaned['price']
